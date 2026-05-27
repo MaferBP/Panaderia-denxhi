@@ -1,0 +1,178 @@
+/* PROFESIONAL MODERN DESIGN SYSTEM */
+
+:root {
+  /* PRIMARY COLORS - Blue Professional */
+  --primary-dark: #1e3a5f;
+  --primary-light: #2c5aa0;
+  --primary-hover: #0096c7;
+  
+  /* SECONDARY COLORS - Teal/Cyan */
+  --secondary: #0096c7;
+  --secondary-light: #0dd9ff;
+  --secondary-dark: #0077a3;
+  
+  /* NEUTRAL COLORS */
+  --bg-primary: #f8fafb;
+  --bg-secondary: #f0f9fc;
+  --bg-tertiary: #ffffff;
+  
+  --text-dark: #1f2937;
+  --text-medium: #4b5563;
+  --text-light: #6b7280;
+  
+  --border-light: #e5e7eb;
+  --border-medium: #d1d5db;
+  
+  /* STATUS COLORS */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --error-dark: #dc2626;
+  
+  /* SHADOWS */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 1px 3px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.12);
+  
+  /* TYPOGRAPHY */
+  --font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --font-family-mono: 'Monaco', 'Courier New', monospace;
+  
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --font-size-4xl: 40px;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* BORDER RADIUS */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  
+  /* SPACING */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+  --spacing-3xl: 48px;
+  
+  /* TRANSITIONS */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-base: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}
+
+* {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-dark);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+/* BUTTON STYLES */
+button {
+  font-family: var(--font-family);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  border: none;
+  cursor: pointer;
+  font-weight: var(--font-weight-medium);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0096c7, #1e3a5f);
+  color: white;
+  padding: 12px 20px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0077a3, #162d47);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--primary-dark);
+  padding: 12px 20px;
+}
+
+.btn-secondary:hover {
+  background: var(--border-light);
+}
+
+/* INPUT STYLES */
+input, select, textarea {
+  font-family: var(--font-family);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  background: white;
+  transition: all var(--transition-base);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(0, 150, 199, 0.1);
+}
+
+/* CARD STYLES */
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 20px;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* TEXT UTILITIES */
+.text-primary {
+  color: var(--primary-dark);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-muted {
+  color: var(--text-light);
+}
+
+.text-error {
+  color: var(--error);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+/* HEADING STYLES */
+h1 { font-size: var(--font-size-4xl); font-weight: var(--font-weight-extrabold); }
+h2 { font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); }
+h3 { font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); }
+h4 { font-size: var(--font-size-xl); font-weight: var(--font-weight-semibold); }
+h5 { font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold); }
+h6 { font-size: var(--font-size-base); font-weight: var(--font-weight-semibold); }
