@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-const apiUrl = "https://panaderia-denxhi-api.azurewebsites.net"
+const apiUrl = "https://panaderia-denxhi-api-a3c9hfckbndmhded.centralus-01.azurewebsites.net"
 
 // https://vite.dev/config/
 export default defineConfig({
