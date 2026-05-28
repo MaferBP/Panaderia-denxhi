@@ -4,12 +4,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from routes import productos
 from routes import usuarios
 from routes import pedidos
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-
-from routes import productos
-from routes import usuarios
-from routes import pedidos
 from routes import reportes
 from routes import inventario
 from routes import cortes
@@ -18,9 +12,15 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=False,
+
+    allow_origins=[
+        "*"
+    ],
+
+    allow_credentials=True,
+
     allow_methods=["*"],
+
     allow_headers=["*"],
 )
 
@@ -33,4 +33,7 @@ app.include_router(cortes.router)
 
 @app.get("/")
 def inicio():
-    return {"mensaje": "API funcionando"}
+
+    return {
+        "mensaje": "API funcionando"
+    }
