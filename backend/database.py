@@ -1,14 +1,11 @@
 import mysql.connector
+import os
 
-def conectar_db():
-
-    conexion = mysql.connector.connect(
-        host="denxhi2026mysqlmafer.mysql.database.azure.com",
-        user="adminpan@denxhi2026mysqlmafer",
-        password="Denxhi2026!",
-        database="panaderia_denxhi",
-        port=3306,
-        ssl_disabled=False
-    )
-
-    return conexion
+conexion = mysql.connector.connect(
+    host=os.getenv("MYSQL_HOST"),
+    user=os.getenv("MYSQL_USER"),
+    password=os.getenv("MYSQL_PASSWORD"),
+    database=os.getenv("MYSQL_DATABASE"),
+    port=int(os.getenv("MYSQL_PORT")),
+    ssl_disabled=False
+)
