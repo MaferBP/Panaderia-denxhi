@@ -2,9 +2,13 @@ import mysql.connector
 
 def conectar_db():
 
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="",
-        database="panaderia_denxhi"
+    conexion = mysql.connector.connect(
+        host="denxhi2026mysqlmafer.mysql.database.azure.com",
+        user="adminpan",
+        password="Denxhi2026!",
+        database="panaderia_denxhi",
+        port=3306,
+        ssl_disabled=False
     )
+
+    return conexion
