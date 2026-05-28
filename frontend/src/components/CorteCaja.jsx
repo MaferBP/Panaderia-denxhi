@@ -21,7 +21,7 @@ function CorteCaja({ setPagina }) {
     }
 
     try {
-      const respuesta = await axios.get("http://192.168.1.28:8000/corte-caja", {
+      const respuesta = await axios.get("/corte-caja", {
         params: { fecha },
       });
 
@@ -39,7 +39,7 @@ function CorteCaja({ setPagina }) {
     }
 
     try {
-      await axios.post("http://192.168.1.28:8000/cortes-caja", {
+      await axios.post("/cortes-caja", {
         fecha_corte: fecha,
         id_usuario: usuario.id_usuario,
         total_pedidos: datos.resumen.total_pedidos,
@@ -203,7 +203,7 @@ function CorteCaja({ setPagina }) {
 
   const obtenerHistorial = async () => {
     try {
-      const respuesta = await axios.get("http://192.168.1.28:8000/cortes-caja");
+      const respuesta = await axios.get("/cortes-caja");
       setHistorial(respuesta.data);
     } catch (error) {
       console.log(error);

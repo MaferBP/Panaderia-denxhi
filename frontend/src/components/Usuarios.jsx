@@ -25,7 +25,7 @@ function Usuarios({ setPagina }) {
     try {
 
       const respuesta = await axios.get(
-        "http://192.168.1.28:8000/usuarios"
+        "/usuarios"
       );
 
       setUsuarios(respuesta.data);
@@ -46,7 +46,7 @@ function Usuarios({ setPagina }) {
     try {
 
       await axios.post(
-        "http://192.168.1.28:8000/usuarios",
+        "/usuarios",
         {
           nombre,
           correo,
@@ -81,7 +81,7 @@ function Usuarios({ setPagina }) {
     try {
 
       await axios.delete(
-        `http://192.168.1.28:8000/usuarios/${id}`
+        `/usuarios/${id}`
       );
 
       obtenerUsuarios();
@@ -119,7 +119,7 @@ function Usuarios({ setPagina }) {
     try {
 
       await axios.put(
-        `http://192.168.1.28:8000/usuarios/${idUsuario}`,
+        `/usuarios/${idUsuario}`,
         {
           nombre,
           correo,

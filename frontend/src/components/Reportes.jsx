@@ -27,7 +27,7 @@ function Reportes({ setPagina }) {
       return;
     }
 
-    const respuesta = await axios.get("http://192.168.1.28:8000/ventas-fecha", {
+    const respuesta = await axios.get("/ventas-fecha", {
       params: {
         fecha_inicio: fechaInicio,
         fecha_fin: fechaFin,

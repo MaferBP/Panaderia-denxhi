@@ -69,7 +69,7 @@ function Productos({ setPagina }) {
     try {
 
       const respuesta = await axios.get(
-        "http://192.168.1.28:8000/productos",
+        "/productos",
         {
           params: {
             buscar: busqueda || undefined,
@@ -127,7 +127,7 @@ function Productos({ setPagina }) {
       if (idEditando) {
 
         await axios.put(
-          `http://192.168.1.28:8000/productos/${idEditando}`,
+          `/productos/${idEditando}`,
           producto
         );
 
@@ -136,7 +136,7 @@ function Productos({ setPagina }) {
       } else {
 
         await axios.post(
-          "http://192.168.1.28:8000/productos",
+          "/productos",
           producto
         );
 
@@ -203,7 +203,7 @@ function Productos({ setPagina }) {
     try {
 
       await axios.delete(
-        `http://192.168.1.28:8000/productos/${id}`
+        `/productos/${id}`
       );
 
       obtenerProductos();

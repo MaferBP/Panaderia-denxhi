@@ -26,7 +26,7 @@ function Pedidos({ setPagina }) {
 
   const obtenerProductos = async () => {
     try {
-      const respuesta = await axios.get("http://192.168.1.28:8000/productos");
+      const respuesta = await axios.get("/productos");
 
       console.log("Productos cargados:", respuesta.data);
 
@@ -39,7 +39,7 @@ function Pedidos({ setPagina }) {
 
   const obtenerPedidos = async () => {
     try {
-      const respuesta = await axios.get("http://192.168.1.28:8000/pedidos");
+      const respuesta = await axios.get("/pedidos");
       setPedidos(respuesta.data);
     } catch (error) {
       console.log("Error al cargar pedidos:", error);
@@ -113,7 +113,7 @@ function Pedidos({ setPagina }) {
     }));
 
     try {
-      const respuesta = await axios.post("http://192.168.1.28:8000/pedidos", {
+      const respuesta = await axios.post("/pedidos", {
         cliente: cliente || "Cliente general",
         total,
         tipo_pago: tipoPago,

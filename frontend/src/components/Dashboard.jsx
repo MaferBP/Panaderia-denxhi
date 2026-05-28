@@ -54,7 +54,7 @@ function Dashboard({ setPagina }) {
     try {
 
       const respuesta = await axios.get(
-        "http://192.168.1.28:8000/estadisticas"
+        "/estadisticas"
       );
 
       setEstadisticas(respuesta.data);
@@ -73,7 +73,7 @@ function Dashboard({ setPagina }) {
     try {
 
       const respuesta = await axios.get(
-        "http://192.168.1.28:8000/pedidos"
+        "/pedidos"
       );
 
       const pedidos = respuesta.data;
@@ -104,7 +104,7 @@ function Dashboard({ setPagina }) {
     try {
 
       const respuesta = await axios.get(
-        `http://192.168.1.28:8000/ventas-empleado/${usuario.id_usuario}`
+        `/ventas-empleado/${usuario.id_usuario}`
       );
 
       setVentasEmpleado(respuesta.data);
@@ -123,7 +123,7 @@ function Dashboard({ setPagina }) {
     try {
 
       const respuesta = await axios.get(
-        "http://192.168.1.28:8000/stock-bajo"
+        "/stock-bajo"
       );
 
       setStockBajo(respuesta.data);
@@ -142,7 +142,7 @@ function Dashboard({ setPagina }) {
     try {
 
       const respuesta = await axios.get(
-        "http://192.168.1.28:8000/productos-mas-vendidos"
+        "/productos-mas-vendidos"
       );
 
       const productos = respuesta.data.map((item) => ({

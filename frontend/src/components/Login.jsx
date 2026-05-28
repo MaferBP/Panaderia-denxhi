@@ -21,7 +21,7 @@ function Login() {
     try {
 
       const respuesta = await axios.post(
-        "http://192.168.1.28:8000/login",
+        "/login",
         {
 
           correo: correo,

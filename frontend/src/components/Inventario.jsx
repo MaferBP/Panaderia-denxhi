@@ -29,7 +29,7 @@ function Inventario({ setPagina }) {
     try {
 
       const respuesta = await axios.get(
-        "http://192.168.1.28:8000/productos"
+        "/productos"
       );
 
       setProductos(respuesta.data);
@@ -48,7 +48,7 @@ function Inventario({ setPagina }) {
     try {
 
       const respuesta = await axios.get(
-        "http://192.168.1.28:8000/mermas"
+        "/mermas"
       );
 
       setMermas(respuesta.data);
@@ -67,7 +67,7 @@ function Inventario({ setPagina }) {
     try {
 
       const respuesta = await axios.get(
-        "http://192.168.1.28:8000/entradas"
+        "/entradas"
       );
 
       setEntradas(respuesta.data);
@@ -88,7 +88,7 @@ function Inventario({ setPagina }) {
     try {
 
       const respuesta = await axios.post(
-        "http://192.168.1.28:8000/inventario",
+        "/inventario",
         {
 
           id_producto: Number(idProducto),
