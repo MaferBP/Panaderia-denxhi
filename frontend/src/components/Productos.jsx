@@ -388,7 +388,7 @@ function Productos({ setPagina }) {
           {imagen && (
             <div className="preview-container">
               <img
-                src={`/productos/${imagen}`}
+                src={`/src/assets/productos/${imagen}`}
                 alt="preview"
                 className="preview-img"
               />
@@ -471,7 +471,7 @@ function Productos({ setPagina }) {
             >
 
               <img
-                src={`/productos/${producto.imagen}`}
+                src={`/src/assets/productos/${producto.imagen}`}
                 alt={producto.nombre}
               />
 
